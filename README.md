@@ -1,7 +1,7 @@
 # Math-Buddy
 We are creating a children friendly calculator!
 
-Project Idea Marcus Jones &amp; Jacob Colver
+Project Idea - Marcus Jones &amp; Jacob Colver
 
 As a kid there were a few things that I absolutely could not stand. Eating my vegetables, going to bed on time, and most of all; trying to navigate the wide world of mathematics. Math seems to be one of those things that you either &quot;just get&quot; or you don&#39;t and for most of my life I just didn&#39;t get it! When speaking to tutors or friends who may have been helping me out with any sort of arithmetic issues the consensus answer to how they developed their mathematical skills and they all said the same thing &quot;I started early&quot; when I was in elementary school, math was comprised of worksheets from a book, homework that I would sit at the kitchen table doing all night and of course my favorite, flash cards. All of these things are painstakingly boring and as a kid just keeping your attention on one thing is a task in itself, but with new technology I began to think &quot;what if math could be fun? And with that thought we decided to create Math Buddy!
 
