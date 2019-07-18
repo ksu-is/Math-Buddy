@@ -11,14 +11,3 @@ GUI Python Calculator:
 
 [https://github.com/tasdikrahman/pyCalc](https://github.com/tasdikrahman/pyCalc)
 
-Python Calculator for Students:
-
-[https://sourceforge.net/projects/python-calc/](https://sourceforge.net/projects/python-calc/)
-
-Beginner Python  Calculator:
-
-[https://codereview.stackexchange.com/questions/196961/basic-calculator-in-python](https://codereview.stackexchange.com/questions/196961/basic-calculator-in-python)
-
-Basic Python Calculator:
-
-[https://stackoverflow.com/questions/34979532/basic-calculator-in-python](https://stackoverflow.com/questions/34979532/basic-calculator-in-python)
