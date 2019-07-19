@@ -42,59 +42,59 @@ class TkGUI(tk.Tk):
 		self.display.grid(row=1, columnspan=101, sticky=tk.W + tk.E)
 
 		self._init_ui()
-        
+		
 	def _init_ui(self):
 		one = tk.Button(
-			self, text="1", command=lambda: self.get_variables(1), font=self.FONT_LARGE)
+			self, text="1", command=lambda: self.get_variables(1), font=self.FONT_LARGE, foreground="green")
 		one.grid(row=2, column=1)
 		two = tk.Button(
-			self, text="2", command=lambda: self.get_variables(2), font=self.FONT_LARGE)
+			self, text="2", command=lambda: self.get_variables(2), font=self.FONT_LARGE, foreground="green")
 		two.grid(row=2, column=25)
 		three = tk.Button(
-			self, text="3", command=lambda: self.get_variables(3), font=self.FONT_LARGE)
+			self, text="3", command=lambda: self.get_variables(3), font=self.FONT_LARGE, foreground="green")
 		three.grid(row=2, column=50)
 
 		four = tk.Button(
-			self, text="4", command=lambda: self.get_variables(4), font=self.FONT_LARGE)
+			self, text="4", command=lambda: self.get_variables(4), font=self.FONT_LARGE, foreground="green")
 		four.grid(row=4, column=1)
 		five = tk.Button(
-			self, text="5", command=lambda: self.get_variables(5), font=self.FONT_LARGE)
+			self, text="5", command=lambda: self.get_variables(5), font=self.FONT_LARGE, foreground="green")
 		five.grid(row=4, column=25)
 		six = tk.Button(
-			self, text="6", command=lambda: self.get_variables(6), font=self.FONT_LARGE)
+			self, text="6", command=lambda: self.get_variables(6), font=self.FONT_LARGE, foreground="green")
 		six.grid(row=4, column=50)
 
 		seven = tk.Button(
-			self, text="7", command=lambda: self.get_variables(7), font=self.FONT_LARGE)
+			self, text="7", command=lambda: self.get_variables(7), font=self.FONT_LARGE, foreground="green")
 		seven.grid(row=6, column=1)
 		eight = tk.Button(
-			self, text="8", command=lambda: self.get_variables(8), font=self.FONT_LARGE)
+			self, text="8", command=lambda: self.get_variables(8), font=self.FONT_LARGE, foreground="green")
 		eight.grid(row=6, column=25)
 		nine = tk.Button(
-			self, text="9", command=lambda: self.get_variables(9), font=self.FONT_LARGE)
+			self, text="9", command=lambda: self.get_variables(9), font=self.FONT_LARGE, foreground="green")
 		nine.grid(row=6, column=50)
 
 		cls = tk.Button(self, text="AC", command=self.clear_all,
 						font=self.FONT_LARGE, foreground="red")
 		cls.grid(row=8, column=1)
 		zero = tk.Button(
-			self, text="0", command=lambda: self.get_variables(0), font=self.FONT_LARGE)
+			self, text="0", command=lambda: self.get_variables(0), font=self.FONT_LARGE, foreground="green")
 		zero.grid(row=8, column=25)
 		result = tk.Button(self, text="=", command=self.calculate,
 						   font=self.FONT_LARGE, foreground="red")
 		result.grid(row=8, column=50)
 
 		plus = tk.Button(
-			self, text="+", command=lambda: self.get_operation("+"), font=self.FONT_LARGE)
+			self, text="+", command=lambda: self.get_operation("+"), font=self.FONT_LARGE, foreground="blue")
 		plus.grid(row=2, column=75)
 		minus = tk.Button(
-			self, text="-", command=lambda: self.get_operation("-"), font=self.FONT_LARGE)
+			self, text="-", command=lambda: self.get_operation("-"), font=self.FONT_LARGE, foreground="blue")
 		minus.grid(row=4, column=75)
 		multiply = tk.Button(
-			self, text="*", command=lambda: self.get_operation("*"), font=self.FONT_LARGE)
+			self, text="*", command=lambda: self.get_operation("*"), font=self.FONT_LARGE, foreground="blue")
 		multiply.grid(row=6, column=75)
 		divide = tk.Button(
-			self, text="/", command=lambda:  self.get_operation("/"), font=self.FONT_LARGE)
+			self, text="/", command=lambda:  self.get_operation("/"), font=self.FONT_LARGE, foreground="blue")
 		divide.grid(row=8, column=75)
 
 		# adding new operations
@@ -103,15 +103,15 @@ class TkGUI(tk.Tk):
 		undo_button.grid(row=2, column=100)
 		
 		right_bracket = tk.Button(
-			self, text=")", command=lambda: self.get_operation(")"), font=self.FONT_LARGE)
+			self, text=")", command=lambda: self.get_operation(")"), font=self.FONT_LARGE, foreground="blue")
 		right_bracket.grid(row=4, column=100)
 		
 		left_bracket = tk.Button(
-			self, text="(", command=lambda: self.get_operation("("), font=self.FONT_LARGE)
+			self, text="(", command=lambda: self.get_operation("("), font=self.FONT_LARGE, foreground="blue")
 		left_bracket.grid(row=6, column=100)
 		
 		square = tk.Button(
-			self, text="^2", command=lambda: self.get_operation("**2"), font=self.FONT_MED)
+			self, text="^2", command=lambda: self.get_operation("**2"), font=self.FONT_MED, foreground="blue")
 		square.grid(row=8, column=100)
 
 	def factorial(self, operator):
