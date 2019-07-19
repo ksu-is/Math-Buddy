@@ -1,4 +1,4 @@
-[x] 1. Create beginning documentation for project idea, ensuring that project has a solidified plan for completion -Jacob
+[x] 1. Create beginning documentation for project idea, ensuring that project has a solidified plan for completion - Jacob
 
 [x] 2. Evaluate the base code in order to decide if calculator format is correct for assignment - Marcus
 
