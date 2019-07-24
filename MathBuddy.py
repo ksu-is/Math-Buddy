@@ -2,17 +2,16 @@ try:
 	import tkinter as tk
 	from tkinter import ttk
 except ImportError:
-	# Python 2
 	import Tkinter as tk
 	import ttk
-
+	
 import parser
 
 class TkGUI(tk.Tk):
-	FONT_LARGE = ("Calibri", 35)  	# selects the font of the text inside buttons
+	FONT_LARGE = ("Calibri", 35)  	# Font of the text inside buttons
 	FONT_MED = ("Calibri", 30)
 
-	# Max rows and columns in the GUI
+	# Customized rows and columns in the GUI
 	MAX_ROW = 101 
 	MAX_COLUMN = 101
 	i = 0
@@ -22,13 +21,12 @@ class TkGUI(tk.Tk):
 		try:
 			super(TkGUI, self).__init__()
 		except TypeError:
-			# Python 2
 			tk.Tk.__init__(self)
 
 		self.title('Math Buddy')
 		self.resizable(width=101, height=101)
 
-		# Configure default theme
+		# CUI theme
 		style = ttk.Style(self)
 		self.configure(bg="aquamarine")
 		
@@ -40,8 +38,32 @@ class TkGUI(tk.Tk):
 
 		self.display = tk.Entry(self, bg="yellow", font=("Calibri", 30))
 		self.display.grid(row=1, columnspan=101, sticky=tk.W + tk.E)
-
+                
 		self._init_ui()
+		print("")
+		print("                                  /|         ,")
+		print("                               ,///        /|")
+		print("                              // //     ,///")
+		print("                             // //     // //")
+		print("                            // //     || ||")
+		print("                           || ||    // //")
+		print("                           || ||   // //")
+		print("                           || ||  // //")
+		print("                           || || || ||")
+		print("                           \\,\|,|\_//")
+		print("                            \\)\)\\|/")
+		print("                            )-."" .-(")
+		print("                           //^\` `/^\\")
+		print("                          //  |   |  \\")
+		print("                        ,/_| 0| _ | 0|_\,")
+		print('                      /`    `"=.v.="`    `\ ')
+		print('                     /`    _."{_,_}"._    `\ ')
+		print("                     `/`  ` \  |||  / `  `\` ")
+		print('                      `",_  \\=^~^=//  _,"` ')
+		print("                          '=,\'-=-'/,=' ")
+		print("")
+		print("         HELLO! YOU ARE NOW SUCESSFULLY RUNNING MathBuddy.py V3!")
+		print("")
 		
 	def _init_ui(self):
 		one = tk.Button(
@@ -97,7 +119,7 @@ class TkGUI(tk.Tk):
 			self, text="/", command=lambda:  self.get_operation("/"), font=self.FONT_LARGE, foreground="blue")
 		divide.grid(row=8, column=75)
 
-		# adding new operations
+		# Custome new operations
 		undo_button = tk.Button(
 			self, text="<-", command=self.undo, font=self.FONT_LARGE, foreground="red")
 		undo_button.grid(row=2, column=100)
@@ -113,7 +135,7 @@ class TkGUI(tk.Tk):
 		square = tk.Button(
 			self, text="^2", command=lambda: self.get_operation("**2"), font=self.FONT_MED, foreground="blue")
 		square.grid(row=8, column=100)
-
+    
 	def factorial(self, operator):
 		"""Calculates the factorial of the number entered."""
 		number = int(self.display.get())
@@ -132,7 +154,6 @@ class TkGUI(tk.Tk):
 		"""clears all the content in the Entry widget."""
 		self.display.delete(0, tk.END)
 		self.NEW_OPERATION = new_operation
-
 	def get_variables(self, num):
 		"""Gets the user input for operands and puts it inside the entry widget.
 
@@ -142,12 +163,66 @@ class TkGUI(tk.Tk):
 			self.clear_all(new_operation=False)
 		self.display.insert(self.i, num)
 		self.i += 1
-
+		print("")
+		print("              SPONGE-BOB")
+		print('      .--..--..--..--..--..--.')
+		print("    .' \  (`._   (_)     _   \ ")
+		print("  .'    |  '._)         (_)  |")
+		print("  \ _.')\      .----..---.   /")
+		print("  |(_.'  |    /    .-\-.  \  |")
+		print("  \     0|    |   ( O| O) | o|")
+		print("   |  _  |  .--.____.'._.-.  |")
+		print("   \ (_) | o         -` .-`  |")
+		print("    |    \   |`-._ _ _ _ _\ /")
+		print("    \    |   |  `. |_||_|   |")
+		print("    | o  |    \_      \     |     -.   .-.")
+		print("    |.-.  \     `--..-'   O |     `.`-' .'")
+		print("  _.'  .' |     `-.-'      /-.__   ' .-'")
+		print(".' `-.` '.|='=.='=.='=.='=|._/_ `-'.'")
+		print("`-._  `.  |________/\_____|    `-.'")
+		print("   .'   ).| '=' '='\/ '=' |")
+		print("   `._.`  '---------------'")
+		print("           //___\   //___\ ")
+		print("             ||       ||")
+		print("             ||_.-.   ||_.-.")
+		print("            (_.--__) (_.--__)")
+		print("")
+		print("GREAT JOB! KEEP UP THE GOOD WORK! YOU HAVE SELECTED AN INTEGER...")
+		print("")
+                      
 	def get_operation(self, operator):
 		"""Gets the operand the user wants to apply on the functions."""
 		length = len(operator)
 		self.display.insert(self.i, operator)
 		self.i += length
+		print("")
+		print("                  SPIDER-MAN")
+		print("                     ,,,, ")
+		print("               ,;) .';;;;',")
+		print("  ;;,,_,-.-.,;;'_,|I\;;;/),,_")
+		print("   `';;/:|:);{ ;;;|| \;/ /;;;\__")
+		print("        L;/-';/ \;;\',/;\/;;;.') \ ")
+		print("       .:`''` - \;;'.__/;;;/  . _'-._")
+		print("     .'/   \     \;;;;;;/.'_7:.  '). \_")
+		print("   .''/     | '._ );}{;//.'    '-:  '.,L")
+		print(" .'. /       \  ( |;;;/_/         \._./;\   _,")
+		print("  . /        |\ ( /;;/_/             ';;;\,;;_,")
+		print(" . /         )__(/;;/_/                (;;'''''")
+		print("  /        _;:':;;;;:';-._             );")
+		print(" /        /   \  `'`   --.'-._         \/")
+		print("        .'     '.  ,'         '-,")
+		print("      /    /   r--,..__       '.\ ")
+		print("    .'    '  .'        '--._     ]")
+		print("    (     :.(;>        _ .' '- ;/")
+		print("    |      /:;(    ,_.';(   __.'")
+		print("     '- -' |;:/    (;;;;-'--'")
+		print("           |;/      ;;(")
+		print("           ''      /;;|")
+		print("                   \;;|")
+		print("                    \/")
+		print("")
+		print("EXCELLENT! KEEP UP THE GOOD WORK! YOU HAVE SELECTED AN OPERATOR...")
+		print("")
 
 	def undo(self):
 		"""removes the last entered operator/variable from entry widget."""
@@ -157,6 +232,50 @@ class TkGUI(tk.Tk):
 			new_string = whole_string[:-1]
 			self.clear_all(new_operation=False)
 			self.display.insert(0, new_string)
+			print("")
+			print("         SQUIDWARD")
+			print("      .--'''''''''--. ")
+			print("   .'      .---.      '.")
+			print("  /    .-----------.    \ ")
+			print(" /        .-----.        \ ")
+			print(" |       .-.   .-.       |")
+			print(" |      /   \ /   \      |")
+			print("  \    | .-. | .-. |    /")
+			print("   '-._| | | | | | |_.-'")
+			print("       | '-' | '-' |")
+			print("        \___/ \___/")
+			print("     _.-'  /   \  `-._")
+			print("   .' _.--|     |--._ '.")
+			print("   ' _...-|     |-..._ '")
+			print("          |     |")
+			print("          '.___.'")
+			print("            | |")
+			print("           _| |_")
+			print("          /\( )/\ ")
+			print("         /  ` '  \ ")
+			print("        | |     | |")
+			print("        '-'     '-'")
+			print("        | |     | |")
+			print("        | |     | |")
+			print("        | |-----| |")
+			print("     .`/  |     | |/`.")
+			print("     |    |     |    |")
+			print("     '._.'| .-. |'._.'")
+			print("           \ | /")
+			print("           | | |")
+			print("           | | |")
+			print("           | | |")
+			print("          /| | |\ ")
+			print("        .'_| | |_`.")
+			print("        `. | | | .'")
+			print("          /  |  \ ")
+			print("    /o`.-'  / \  `-.`o\ ")
+			print("   /o  o\ .'   `. /o  o\ ")
+			print("   `.___.'       `.___.'")
+			print("")
+			print("YOUR ENTRY HAS BEEN BACKSPACED...")
+			print("")
+                        
 		else:
 			self.clear_all() 
 			self.display.insert(0, "Error, press AC")
@@ -165,23 +284,106 @@ class TkGUI(tk.Tk):
 	    """Evaluates the expression.
 
 	    ref : http://stackoverflow.com/questions/594266/equation-parsing-in-python
-	    """
+	    """        
 	    whole_string = self.display.get()
 	    try:
 	        formulae = parser.expr(whole_string).compile()
 	        result = eval(formulae)
 	        self.clear_all()
 	        self.display.insert(0, result)
+	        print("")
+	        print("          MICKEY MOUSE")
+	        print('            .-"""-.  ')
+	        print("           /       \ ")
+	        print("           \       / ")
+	        print('    .-"""-.-`.-.-.<  _')
+	        print("   /      _,-\ ()()_/:) ")
+	        print("   \     / ,  `     `| ")
+	        print("    '-..-| \-.,___,  / ")
+	        print("          \ `-.__/  / ")
+	        print("         / `-.__.-\` ")
+	        print("        / /|    ___\ ")
+	        print("       ( ( |.- `   `'\ ")
+	        print("        \ \/    {}{}  | ")
+	        print("         \|           / ")
+	        print("          \        , / ")
+	        print("          ( __`;-;'__`) ")
+	        print("          `//'`   `||` ")
+	        print("         _//       || ")
+	        print(' .-"-._,(__)     .(__).-""-.')
+	        print("/          \    /           \ ")
+	        print('\          /    \           /')
+	        print(" `'-------`      `--------'`")
+	        print("")
+	        print("                                    _____")
+	        print("                                .d88888888bo.")
+	        print("                              .d8888888888888b.")
+	        print("                              8888888888888888b")
+	        print("                              888888888888888888")
+	        print("                              888888888888888888")
+	        print("                               Y8888888888888888")
+	        print("                         ,od888888888888888888P")
+	        print("                      .'`Y8P'```'Y8888888888P'")
+	        print("                    .'_   `  _     'Y88888888b")
+	        print("                   /  _`    _ `      Y88888888b   ____")
+	        print("               _  | /  \  /  \      8888888888.d888888b.")
+	        print("              d8b | | /|  | /|      8888888888d8888888888b")
+	        print("             8888_\ \_|/  \_|/      d888888888888888888888b")
+	        print("             .Y8P  `'-.            d88888888888888888888888")
+	        print("            /          `          `      `Y8888888888888888")
+	        print("           |                        __    888888888888888P")
+	        print("            \                       / `   dPY8888888888P'")
+	        print("             '._                  .'     .'  `Y888888P`")
+	        print("                ` '-.,__    ___.-'    .-'")
+	        print("                    `-._````  __..--'`")
+	        print("                        ``````")
+	        print("")
+	        print("")
+	        print(" NICE WORK! YOU HAVE SUCCESSFULLY CALCULATED THE EXPRESSION...")
+	        print("")
 	    except Exception:
 	        self.clear_all()
 	        self.display.insert(0, "Error!")
-
+                
 	def run(self):
 		"""Initiate event loop."""
 		self.mainloop()
-		
 
-from MathBuddy import TkGUI
+                      
+		
+print("             _    _      _                            _____     ")
+print("            | |  | |    | |                          |_   _|    ")
+print("            | |  | | ___| | ___ ___  _ __ ___   ___    | | ___  ")
+print("            | |/\| |/ _ \ |/ __/ _ \| '_ ` _ \ / _ \   | |/ _ \ ")
+print("            \  /\  /  __/ | (_| (_) | | | | | |  __/   | | (_) |")
+print("             \/  \/ \___|_|\___\___/|_| |_| |_|\___|   \_/\___/ ")
+print("")
+print("          ___  ___      _   _      ______           _     _       ")
+print("          |  \/  |     | | | |     | ___ \         | |   | |      ")
+print("          | .  . | __ _| |_| |__   | |_/ /_   _  __| | __| |_   _ ")
+print("          | |\/| |/ _` | __| '_ \  | ___ \ | | |/ _` |/ _` | | | |")
+print("          | |  | | (_| | |_| | | | | |_/ / |_| | (_| | (_| | |_| |")
+print("          \_|  |_/\__,_|\__|_| |_| \____/ \__,_|\__,_|\__,_|\__, |")
+print("                                                             __/ |")
+print("                                                            |___/ ")
 
 app = TkGUI()
 app.run()
+
+print(" _____ _                 _         ______           _   _     _             ")
+print("|_   _| |               | |        |  ___|         | | | |   (_)            ")
+print("  | | | |__   __ _ _ __ | | _____  | |_ ___  _ __  | | | |___ _ _ __   __ _ ")
+print("  | | | '_ \ / _` | '_ \| |/ / __| |  _/ _ \| '__| | | | / __| | '_ \ / _` |")
+print("  | | | | | | (_| | | | |   <\__ \ | || (_) | |    | |_| \__ \ | | | | (_| |")
+print("  \_/ |_| |_|\__,_|_| |_|_|\_\___/ \_| \___/|_|     \___/|___/_|_| |_|\__, |")
+print("                                                                      __/ |")
+print("                                                                     |___/ ")
+print
+print("          ___  ___      _   _      ______           _     _       ")
+print("          |  \/  |     | | | |     | ___ \         | |   | |      ")
+print("          | .  . | __ _| |_| |__   | |_/ /_   _  __| | __| |_   _ ")
+print("          | |\/| |/ _` | __| '_ \  | ___ \ | | |/ _` |/ _` | | | |")
+print("          | |  | | (_| | |_| | | | | |_/ / |_| | (_| | (_| | |_| |")
+print("          \_|  |_/\__,_|\__|_| |_| \____/ \__,_|\__,_|\__,_|\__, |")
+print("                                                             __/ |")
+print("                                                            |___/ ")
