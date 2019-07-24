@@ -8,10 +8,11 @@ except ImportError:
 import parser
 
 class TkGUI(tk.Tk):
-	FONT_LARGE = ("Calibri", 35)  	# Font of the text inside buttons
+    # Font of the text inside buttons.
+	FONT_LARGE = ("Calibri", 35)  	
 	FONT_MED = ("Calibri", 30)
 
-	# Customized rows and columns in the GUI
+	# Customized rows and columns in the GUI.
 	MAX_ROW = 101 
 	MAX_COLUMN = 101
 	i = 0
@@ -26,7 +27,7 @@ class TkGUI(tk.Tk):
 		self.title('Math Buddy')
 		self.resizable(width=101, height=101)
 
-		# CUI theme
+		# GUI theme.
 		style = ttk.Style(self)
 		self.configure(bg="aquamarine")
 		
@@ -66,6 +67,7 @@ class TkGUI(tk.Tk):
 		print("")
 		
 	def _init_ui(self):
+	    # GUI Buttons Functionality.
 		one = tk.Button(
 			self, text="1", command=lambda: self.get_variables(1), font=self.FONT_LARGE, foreground="green")
 		one.grid(row=2, column=1)
@@ -119,7 +121,7 @@ class TkGUI(tk.Tk):
 			self, text="/", command=lambda:  self.get_operation("/"), font=self.FONT_LARGE, foreground="blue")
 		divide.grid(row=8, column=75)
 
-		# Custome new operations
+		# Custom new operations.
 		undo_button = tk.Button(
 			self, text="<-", command=self.undo, font=self.FONT_LARGE, foreground="red")
 		undo_button.grid(row=2, column=100)
@@ -137,7 +139,7 @@ class TkGUI(tk.Tk):
 		square.grid(row=8, column=100)
     
 	def factorial(self, operator):
-		"""Calculates the factorial of the number entered."""
+		# Function calculates the factorial of the number entered.
 		number = int(self.display.get())
 		fact = 1
 		try:
@@ -151,14 +153,11 @@ class TkGUI(tk.Tk):
 			self.display.insert(0, "Error")
 
 	def clear_all(self, new_operation=True):
-		"""clears all the content in the Entry widget."""
+		# Function clears all the content in the Entry widget.
 		self.display.delete(0, tk.END)
 		self.NEW_OPERATION = new_operation
 	def get_variables(self, num):
-		"""Gets the user input for operands and puts it inside the entry widget.
-
-		If a new operation is being carried out, then the display is cleared.
-		"""
+		# Function gets the user input for operands and puts it inside the entry widget.
 		if self.NEW_OPERATION:
 			self.clear_all(new_operation=False)
 		self.display.insert(self.i, num)
@@ -191,7 +190,7 @@ class TkGUI(tk.Tk):
 		print("")
                       
 	def get_operation(self, operator):
-		"""Gets the operand the user wants to apply on the functions."""
+		# Function gets the operator that the user wants to apply to the expression.
 		length = len(operator)
 		self.display.insert(self.i, operator)
 		self.i += length
@@ -225,10 +224,9 @@ class TkGUI(tk.Tk):
 		print("")
 
 	def undo(self):
-		"""removes the last entered operator/variable from entry widget."""
+		# Function removes the last entered value from the entry widget.
 		whole_string = self.display.get()
-		if len(whole_string):        ## repeats until
-			## now just decrement the string by one index
+		if len(whole_string):        
 			new_string = whole_string[:-1]
 			self.clear_all(new_operation=False)
 			self.display.insert(0, new_string)
@@ -281,7 +279,7 @@ class TkGUI(tk.Tk):
 			self.display.insert(0, "Error, press AC")
 
 	def calculate(self):
-	    """Evaluates the expression."""        
+	    # Function evaluates the expression.        
 	    whole_string = self.display.get()
 	    try:
 	        formulae = parser.expr(whole_string).compile()
@@ -343,7 +341,7 @@ class TkGUI(tk.Tk):
 	        self.display.insert(0, "Error!")
                 
 	def run(self):
-		"""Initiate event loop."""
+		# Internal infinite loop.
 		self.mainloop()
 
                       
