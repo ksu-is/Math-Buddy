@@ -281,10 +281,7 @@ class TkGUI(tk.Tk):
 			self.display.insert(0, "Error, press AC")
 
 	def calculate(self):
-	    """Evaluates the expression.
-
-	    ref : http://stackoverflow.com/questions/594266/equation-parsing-in-python
-	    """        
+	    """Evaluates the expression."""        
 	    whole_string = self.display.get()
 	    try:
 	        formulae = parser.expr(whole_string).compile()
