@@ -10,7 +10,7 @@
 
 [x] 6. Begin to discuss the correct vocabulary for the calculator in order to ensure that it is kid friendly - Marcus/Jacob
 
-[x] 7. Replace current calculator wording with child friendly content to ensure the ease of use for children - Jacob
+[x] 7. Replace current calculator code with child friendly content to ensure the ease of use for children - Jacob
 
 [x] 8. Test code to ensure that it is properly working and able to be used by target audience - Marcus
 
